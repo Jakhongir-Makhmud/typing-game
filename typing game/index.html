@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+        <h1 class="header">Word Beater</h1>
+
+        <label for="level">Level:</label>
+        <select name="level" id="level">
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+            <option value="manual">manual</option>
+        </select>
+
+        <br>
+
+        <h1 class="word">word</h1>
+        <input autofocus class="mainInput" type="text">
+
+
+        <p class="massage"></p>
+
+        <br>
+        <div class="time-score">
+            <p>Seconds left: <span class="timeLeft"> 0</span></p>
+
+            <p>Your score is: <span class="score">0</span></p>
+        </div>
+
+        <br>
+
+        <button class="restart-btn">restart</button>
+
+        <div id="manual-board" style="display: none;">
+            <label for="seconds">Seconds: </label>
+            <input value="5" id="seconds-inp" min="2" max="7" type="number">
+            <br>
+            <label>NO. of Words per stage: </label>
+            <input id="wordsNum" min="1" max="5" value="1" type="number">
+            <h2>Word Length:</h2>
+            <br>
+            <label>Min: </label>
+            <input id="min-inp" min="2" max="12" value="2" type="number">
+
+            <label>Max: </label>
+            <input id="max-inp" min="3" max="14" value="14" type="number">
+            <br>
+            <button class="ok">enter</button>
+        </div>
+
+        <div class="rule">
+            <p>After each word press 'space' tab in order to submit it, the reason is to make it as an reflex. </p>
+        </div>
+    </div>
+
+    <script type="module" defer src="./index.js"></script>
+</body>
+
+</html>
